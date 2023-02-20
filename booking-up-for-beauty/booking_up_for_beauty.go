@@ -16,7 +16,7 @@ func Schedule(date string) time.Time {
 func HasPassed(date string) bool {
 	var layout string = "January 2, 2006 15:04:05"
 	parsedDate, _ := time.Parse(layout, date)
-	return time.Now().Compare(parsedDate) == 1
+	return time.Now().After(parsedDate)
 }
 
 // IsAfternoonAppointment returns whether a time is in the afternoon.
