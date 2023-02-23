@@ -13,7 +13,7 @@ func IsValidLine(text string) bool {
 
 // SplitLogLine split the text based in your dividers and return a list of sections
 func SplitLogLine(text string) []string {
-	regex, _ := regexp.Compile(`<>|<(\*|=|~|-)+>`)
+	regex, _ := regexp.Compile(`<> | <(\* | = | ~ | -)+>`)
 	return regex.Split(text, -1)
 }
 
